@@ -91,9 +91,10 @@ class Card {
 		this.frontSideBorderColor = this.enabled ? '#F6F6F6' : '#5865F2';
 		// Set backside color
 		//If side is back show color else show front img
-		if (this.side) {
+		if (this.side == sides.BACK) {
 			fill(this.backSideColor);
 			rect(this.x, this.y, this.wh, this.wh);
+			return;
 		}
 		if (this.side == sides.FRONT) {
 			fill(this.frontSideBorderColor);
